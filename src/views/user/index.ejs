@@ -1,0 +1,30 @@
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>SN</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Created</th>
+            <th>Updated</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% list.forEach((item, index) => {%>
+            <tr>
+                <td><%= index+1 %></td>
+                <td><%= item.name%></td>
+                <td><%= item.email%></td>
+                <td><%= item.address%></td>
+                <td><%= item.createdAt%></td>
+                <td><%= item.updatedAt%></td>
+                <td>
+                    <a href="/user/edit/<%= item.id %>" class="btn btn-primary btn-sm">Edit</a>
+                </td>
+            </tr>
+        <% })%>
+    </tbody>
+</table>
+   
